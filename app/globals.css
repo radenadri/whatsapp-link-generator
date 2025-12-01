@@ -1,26 +1,41 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: noir --default;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@plugin "daisyui/theme" {
+  name: 'noir';
+  default: true;
+  prefersdark: false;
+  color-scheme: dark;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --color-base-100: #050505;
+  --color-base-200: #0f0f0f;
+  --color-base-300: #1a1a1a;
+  --color-base-content: #f5f5f5;
+  --color-primary: #f5f5f5;
+  --color-primary-content: #050505;
+  --color-secondary: #d1d1d1;
+  --color-secondary-content: #050505;
+  --color-accent: #a0a0a0;
+  --color-accent-content: #050505;
+  --color-neutral: #111111;
+  --color-neutral-content: #f5f5f5;
+  --color-info: #d9d9d9;
+  --color-info-content: #050505;
+  --color-success: #bfbfbf;
+  --color-success-content: #050505;
+  --color-warning: #858585;
+  --color-warning-content: #050505;
+  --color-error: #5c5c5c;
+  --color-error-content: #f5f5f5;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.35rem;
+  --radius-box: 0.65rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
